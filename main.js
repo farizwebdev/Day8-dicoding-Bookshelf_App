@@ -197,7 +197,7 @@ function removeBook(bookId) {
   saveData();
 }
 
-// --- LOGIKA EDIT BUKU ---
+// LOGIKA EDIT BUKU
 
 // Mengaktifkan mode edit dan mengisi form
 function enableEditMode(bookId) {
