@@ -1,6 +1,6 @@
 # Bookshelf App Starter Project
 
-#### Username: farz-hha (IDCamp 2025)
+## Username: farz-hha (IDCamp 2025)
 
 Berikut adalah starter project untuk siswa yang sedang mengerjakan tugas akhir kelas Belajar Membuat Front-End Web untuk Pemula.
 
