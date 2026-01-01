@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+
+    <script defer src="main.js"></script>
+    
+    <style>
+      body { 
+        font-family: sans-serif; 
+        max-width: 800px; 
+        margin: 0 auto; 
+        padding: 20px; 
+    }
+
+      section { 
+        margin-bottom: 2rem; 
+        border: 1px solid #ccc; 
+        padding: 1rem; 
+        border-radius: 8px; 
+    }
+      .input_section { 
+        margin-bottom: 10px; 
+    }
+      label { 
+        display: block; 
+        font-weight: bold; 
+        margin-bottom: 5px; 
+    }
+      input[type="text"], input[type="number"] { 
+        width: 100%; 
+        padding: 8px; 
+        box-sizing: border-box; 
+    }
+      input[type="checkbox"] { 
+        transform: scale(1.5); 
+        margin-right: 10px; 
+    }
+      button { 
+        padding: 10px 15px; 
+        cursor: pointer; 
+        background-color: cornflowerblue; 
+        color: white; 
+        border: none; 
+        border-radius: 4px; 
+        margin-top: 10px; 
+    }
+      /* Style untuk Item Buku */
+      div[data-testid="bookItem"] { 
+        border: 1px solid #eee; 
+        padding: 15px; 
+        margin-bottom: 10px; 
+        border-radius: 5px; 
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    }
+      div[data-testid="bookItem"] button { 
+        margin-right: 5px; 
+        background-color: #555; 
+    }
+      div[data-testid="bookItem"] button[data-testid="bookItemDeleteButton"] { 
+        background-color: #d9534f; 
+    }
+      div[data-testid="bookItem"] button[data-testid="bookItemEditButton"] { 
+        background-color: #f0ad4e; 
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 3rem;
+        padding: 20px;
+        border-top: 1px solid #ddd;
+        color: #777;
+        font-size: 1em;
+    }
+      
+      footer span {
+        color: cornflowerblue;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Aplikasi Buku by <span style="color: #007bff;">Farizwebdev</span></h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Tambah Buku Baru</h2>
+        <form id="bookForm" data-testid="bookForm">
+          <div class="input_section">
+            <label for="bookFormTitle">Judul</label>
+            <input id="bookFormTitle" type="text" required data-testid="bookFormTitleInput" />
+          </div>
+          <div class="input_section">
+            <label for="bookFormAuthor">Penulis</label>
+            <input id="bookFormAuthor" type="text" required data-testid="bookFormAuthorInput" />
+          </div>
+          <div class="input_section">
+            <label for="bookFormYear">Tahun</label>
+            <input id="bookFormYear" type="number" required data-testid="bookFormYearInput" />
+          </div>
+          <div class="input_section">
+            <label for="bookFormIsComplete">Selesai dibaca</label>
+            <input
+              id="bookFormIsComplete"
+              type="checkbox"
+              data-testid="bookFormIsCompleteCheckbox"
+            />
+          </div>
+          <button id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
+            Masukkan Buku ke rak <span>Belum selesai dibaca</span>
+          </button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Cari Buku</h2>
+        <form id="searchBook" data-testid="searchBookForm">
+          <label for="searchBookTitle">Judul</label>
+          <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" />
+          <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">
+            Cari
+          </button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Belum selesai dibaca</h2>
+        <div id="incompleteBookList" data-testid="incompleteBookList"></div>
+      </section>
+
+      <section>
+        <h2>Selesai dibaca</h2>
+        <div id="completeBookList" data-testid="completeBookList"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Dicoding Academy &copy; 2025, by <span>Farizwebdev</span></p>
+    </footer>
+
+    <script>
+      const checkbox = document.getElementById('bookFormIsComplete');
+      const textSubmit = document.querySelector('#bookFormSubmit span');
+
+      checkbox.addEventListener('change', function() {
+        if (checkbox.checked) {
+            textSubmit.innerText = 'Selesai dibaca';
+        } else {
+            textSubmit.innerText = 'Belum selesai dibaca';
+        }
+      });
+    </script>
+  </body>
+</html>
