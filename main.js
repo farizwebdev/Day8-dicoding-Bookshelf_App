@@ -1,4 +1,4 @@
-// --- INISIALISASI VARIABEL & KONSTANTA ---
+// INISIALISASI VARIABEL & KONSTANTA
 const books = [];
 const RENDER_EVENT = 'render-book';
 const SAVED_EVENT = 'saved-book';
