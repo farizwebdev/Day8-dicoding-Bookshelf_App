@@ -79,7 +79,7 @@ function loadDataFromStorage() {
   document.dispatchEvent(new Event(RENDER_EVENT));
 }
 
-// --- FUNGSI MANIPULASI DOM (TAMPILAN) ---
+// FUNGSI MANIPULASI DOM (TAMPILAN)
 
 // Membuat elemen HTML untuk satu buku
 function makeBookElement(bookObject) {
