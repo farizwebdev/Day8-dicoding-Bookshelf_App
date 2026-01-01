@@ -150,7 +150,7 @@ function makeBookElement(bookObject) {
   return container;
 }
 
-// --- LOGIKA UTAMA (CRUD) ---
+// LOGIKA UTAMA (CRUD)
 
 // Menambahkan Buku Baru
 function addBook() {
