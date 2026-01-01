@@ -46,7 +46,7 @@ function findBookIndex(bookId) {
   return -1;
 }
 
-// --- FUNGSI LOCAL STORAGE ---
+// FUNGSI LOCAL STORAGE
 
 // Cek apakah browser mendukung LocalStorage
 function isStorageExist() {
