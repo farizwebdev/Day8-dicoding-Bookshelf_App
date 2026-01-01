@@ -8,7 +8,7 @@ const STORAGE_KEY = 'BOOKSHELF_APPS';
 let isEditing = false;
 let editedBookId = null;
 
-// --- FUNGSI UTILITAS (HELPER) ---
+// FUNGSI UTILITAS (HELPER)
 
 // Menghasilkan ID unik berdasarkan timestamp
 function generateId() {
