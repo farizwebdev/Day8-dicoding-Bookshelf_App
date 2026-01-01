@@ -244,7 +244,7 @@ function updateBook() {
   saveData();
 }
 
-// --- EVENT LISTENER UTAMA ---
+// EVENT LISTENER UTAMA
 
 document.addEventListener('DOMContentLoaded', function () {
   const submitForm = document.getElementById('bookForm');
