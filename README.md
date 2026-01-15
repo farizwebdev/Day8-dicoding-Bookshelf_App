@@ -2,7 +2,7 @@
 
 ## Username: farz-hha (IDCamp 2025)
 
-Berikut adalah starter project untuk siswa yang sedang mengerjakan tugas akhir kelas Belajar Membuat Front-End Web untuk Pemula.
+Berikut adalah starter project untuk siswa yang sedang mengerjakan tugas akhir kelas Belajar Membuat Front-End Web untuk Pemula..
 
 ## Ketentuan Pengerjaan Tugas
 
